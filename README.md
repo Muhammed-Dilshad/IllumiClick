@@ -92,7 +92,7 @@ The Firebase Realtime Database incorporates a dedicated node for LED state stora
 
 ### Hardware Design:
 
-![Screenshot 2024-02-01 064400.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/47461b2c-536a-443a-b874-34c0c5502936/d5ced98d-2a1b-438b-a7d1-88d08355f45d/Screenshot_2024-02-01_064400.png)
+![https://prod-files-secure.s3.us-west-2.amazonaws.com/47461b2c-536a-443a-b874-34c0c5502936/d5ced98d-2a1b-438b-a7d1-88d08355f45d/Screenshot_2024-02-01_064400.png](https://github.com/Muhammed-Dilshad/IllumiClick/blob/main/resources/Hardware.png)
 
 ### Components:
 
@@ -105,13 +105,11 @@ The Firebase Realtime Database incorporates a dedicated node for LED state stora
 3. [Firebase Realtime Database](https://www.notion.so/IllumiClick-9172a7ae9d9140e0bd6c1fc65e11bb81?pvs=21)
    - Description: The Firebase Realtime Database acts as the cloud-based storage solution for the project. It facilitates real-time communication between the ESP32 microcontroller and the mobile app, allowing for dynamic control of connected devices.
 
-### User Interface Design
-
-:
+### User Interface Design:
 
 The "IllumiClick" app features an intuitive user interface designed for remote LED control. Included are screenshots or wireframes showcasing the app's layout, controls, and visual elements.
 
-![Section 1 (Medium).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/47461b2c-536a-443a-b874-34c0c5502936/7ece02f6-aeb9-46c4-bf75-3f708c21106a/Section_1_(Medium).png)
+![interface.png](https://github.com/Muhammed-Dilshad/IllumiClick/blob/main/resources/App%20interface.png)
 
 ### Data Flow Diagrams:
 
@@ -119,7 +117,7 @@ A diagram visually representing the flow of data within the system. Illustrates 
 
 ### Work flow:
 
-![hai.svg](https://prod-files-secure.s3.us-west-2.amazonaws.com/47461b2c-536a-443a-b874-34c0c5502936/d7722868-f1c4-4cee-9f93-f634194de12d/hai.svg)
+![Flowchart.svg](https://github.com/Muhammed-Dilshad/IllumiClick/blob/main/resources/flow%20chart.svg)
 
 ## Technologies Used:
 
