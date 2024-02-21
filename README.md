@@ -40,26 +40,34 @@ The current project focuses specifically on its defined scope, and extensive dis
 
 **Team Members:**
 
-1. Aswinlal K S
-   - Role: App Developer
-   - Responsibilities:
+## Team Members and Roles:
+
+1. **Aswinlal K S**
+   - **Role:** App Developer
+   - **Responsibilities:**
      - Developed the "IllumiClick" mobile app.
      - Focused on the user interface and overall app functionality.
-2. Muhammed Dilshad K
-   - Role: Integration
-   - Responsibilities:
+
+2. **Muhammed Dilshad K**
+   - **Role:** Integration
+   - **Responsibilities:**
      - Integrated the mobile app with Firebase Realtime Database.
      - Integrated the app and ESP32 module for seamless communication.
-3. Remiel George VJ
-   - Role: Project Support
-   - Responsibilities:
-     - Provides general support to the project.
-     - Assists with miscellaneous tasks or requirements as needed.
-4. Sharun P S
-   - Role: Project Support
-   - Responsibilities:
-     - Provides general support to the project.
-     - Assists with miscellaneous tasks or requirements as needed.
+
+3. **Remiel George VJ**
+   - **Role:** Code Debug
+   - **Responsibilities:**
+     - providing expertise in code debugging for the ESP32 module.
+     - Provided general support to the project.
+
+4. **Sharun P S**
+   - **Role:** Project Support
+   - **Responsibilities:**
+     - Provided general support to the project.
+     - Assisted with miscellaneous tasks or requirements as needed.
+
+**Note:**
+- Remiel George VJ specifically contributed to the project by providing expertise in code debugging for the ESP32 module.
 
 ## Requirements:
 
