@@ -137,38 +137,67 @@ A diagram visually representing the flow of data within the system. Illustrates 
   - Explanation for your provided Arduino code:
 
 ```arduino
-#include <FirebaseESP32.h>
-#include <WiFi.h>
+/*
+  Make sure your Firebase project's '.read' and '.write' rules are set to 'true'. 
+  Ignoring this will prevent the MCU from communicating with the database. 
+*/
+#include <ESP32Firebase.h>
 
-// Firebase configuration
-#define FIREBASE_HOST "Your_firebase_url "
-#define FIREBASE_AUTH "your_firebase_auth_token"
+#define _SSID "CIDRIE"                                                     // Your WiFi SSID
+#define _PASSWORD "cidrie2023@mits"                                        // Your WiFi Password
+#define REFERENCE_URL "https://led-with-app-default-rtdb.firebaseio.com/"  // Your Firebase project reference url
+#define LED_PIN 13
 
-// LED pin configuration
-#define LED_PIN 13 // Assuming the LED is connected to pin 13
+Firebase firebase(REFERENCE_URL);
 
 void setup() {
   Serial.begin(115200);
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();
+  delay(1000);
 
-  // Connect to Wi-Fi
-  WiFi.begin("your_wifi_ssid", "your_wifi_password");
+  // Connect to WiFi
+  Serial.println();
+  Serial.println();
+  Serial.print("Connecting to: ");
+  Serial.println(_SSID);
+  WiFi.begin(_SSID, _PASSWORD);
+
+  // Wait until connected to WiFi
   while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting to WiFi...");
+    delay(500);
+    Serial.print("-");
   }
-  Serial.println("Connected to WiFi");
 
-  // Initialize Firebase
-  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+  Serial.println("");
+  Serial.println("WiFi Connected");
+
+  // Print the IP address
+  Serial.print("IP Address: ");
+  Serial.print("http://");
+  Serial.print(WiFi.localIP());
+  Serial.println("/");
+  //================================================================//
+  //================================================================//
+
+  // Example of getting an int from the Firebase database.
+  int data2 = firebase.getInt("/LED_State");
+  Serial.print("Received Int:");
+  Serial.println(data2);
 }
 
 void loop() {
-  // Read LED state from Firebase
-  Firebase.getString("LED_STATE");
-  if (Firebase.getString("LED_STATE") == "ON") {
+  // Get the LED state as a string from the Firebase database.
+  String ledState = firebase.getString("/LED_STATE");
+  Serial.println(ledState);
+
+  // Control the LED based on the received state.
+  if (ledState == "ON") {
     digitalWrite(LED_PIN, HIGH); // Turn ON the LED
   } else {
-    digitalWrite(LED_PIN, LOW); // Turn OFF the LED
+    digitalWrite(LED_PIN, LOW);  // Turn OFF the LED
   }
 
   delay(1000); // Adjust delay as needed
